@@ -28,7 +28,7 @@ const showTimeService = {
         });
 
         if(insert){
-            const res = await fetch(`http://localhost:3005/seats`,{
+            const res = await fetch(`https://seats-service.onrender.com/seats`,{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
@@ -65,7 +65,7 @@ const showTimeService = {
 
             if(old_total_seats < new_total_seats){
                 const difference_seats = new_total_seats - old_total_seats;
-                const res = await fetch(`http://localhost:3005/seats/`,{
+                const res = await fetch(`https://seats-service.onrender.com/seats/`,{
                     method:"POST",
                     headers:{
                         "Content-Type":"application/json"
@@ -82,7 +82,7 @@ const showTimeService = {
                     return false
             }else{
                 const difference_seats = old_total_seats - new_total_seats;
-                const res = await fetch(`http://localhost:3005/seats/bulk-remove/`,{
+                const res = await fetch(`https://seats-service.onrender.com/seats/bulk-remove/`,{
                     method:"DELETE",
                     headers:{
                         "Content-Type":"application/json"
