@@ -10,8 +10,8 @@ const showTimeModel = {
         const sql = `SELECT 
                     showtime_public_id, showtime_name 
                     FROM showtime
-                    LIMIT ? OFFSET ?`;
-        const [shows] = await pool.execute(sql,[limit,offset]);
+                    LIMIT ${limit} OFFSET ${offset}`;
+        const [shows] = await pool.execute(sql);
         return shows ?? null;
     },
     
