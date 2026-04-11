@@ -13,7 +13,7 @@ const showTimeModel = {
                     LIMIT ${limit} OFFSET ${offset}`;
         console.log(sql);
         const [shows] = await pool.execute(sql);
-        consoe.log(shows);
+        console.log(shows);
         return shows ?? null;
     },
     
