@@ -11,7 +11,9 @@ const showTimeModel = {
                     showtime_public_id, showtime_name 
                     FROM showtime
                     LIMIT ${limit} OFFSET ${offset}`;
+        console.log(sql);
         const [shows] = await pool.execute(sql);
+        consoe.log(shows);
         return shows ?? null;
     },
     
